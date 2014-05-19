@@ -52,7 +52,7 @@
         var scrollStart = { x: document.documentElement.scrollLeft, y: document.documentElement.scrollTop };
 
         (function animloop(){
-            if (/*scrolledSoFar.x >= target.x &&*/ scrolledSoFar.y >= Math.abs(target.y)) {
+            if (scrolledSoFar.x >= target.x && scrolledSoFar.y >= Math.abs(target.y)) {
                 return;
             }
 
@@ -63,6 +63,7 @@
         function render() {
             var scrollAmount;
 
+            // Vertical scroll
             if (scrolledSoFar.y < Math.abs(target.y)) {
 
                 // t: current time, b: begInnIng value, c: change In value, d: duration
@@ -76,6 +77,23 @@
 
                 window.scrollBy(0, Math.ceil(scrollAmount));
                 scrolledSoFar.y += Math.abs(Math.ceil(scrollAmount));
+
+            }
+
+            // Horizontal scroll
+            if (scrolledSoFar.x < Math.abs(target.x)) {
+
+                // t: current time, b: begInnIng value, c: change In value, d: duration
+                scrollAmount = window.gestureControlInteractions.easing.easeInQuad(
+                    null,
+                    Date.now() - animationStartTime,
+                    scrollStart.x,
+                    target.x,
+                    1.5 * 1000
+                );
+
+                window.scrollBy(Math.ceil(scrollAmount), 0);
+                scrolledSoFar.x += Math.abs(Math.ceil(scrollAmount));
 
             }
 
