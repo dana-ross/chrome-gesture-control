@@ -3,6 +3,8 @@
 This is an experimental Chrome extension for scrolling web pages by gesturing in from of your webcam. It's based on
 gesture.js, which tries to go a good job of gesture detection with the 2D camera built into most laptops these days.
 
+![Chrome Gesture Control screenshot](https://raw.githubusercontent.com/daveross/chrome-gesture-control/master/screenshot-1.png)
+
 ## Installation
 
 Download the extension or clone this repo somewhere on your computer. Open Chrome's
