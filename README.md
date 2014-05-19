@@ -24,9 +24,10 @@ Two hands can be used to scroll up or down by 1200px, but detection is kind of f
 This extension was written by Dave Ross ([dave@davidmichaelross.com](mailto:dave@davidmichaelross.com)), based on the
 following open source contributions:
 
-* [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) by George McGinley Smith
+* [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) by George McGinley Smith, edited to remove jQuery dependency
 * [gesture.js](https://github.com/willy-vvu/reveal.js/blob/master/js/gesture.js) from William Wu's [gesture-driven fork
-of reveal.js](http://www.chromeexperiments.com/detail/gesture-based-revealjs/)
+of reveal.js](http://www.chromeexperiments.com/detail/gesture-based-revealjs/). This file was heavily modified to allow
+custom callbacks for gestures and to keep it from polluting the global namespace.
 
 ## License
 
