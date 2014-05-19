@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Gesture Control",
+    "author" : "David Michael Ross",
+    "short_name" : "Wave goodbye to your mouse",
+    "description": "Control your browser with your webcam and gestures",
+    "version": "1.0",
+    "permissions": [
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "<all_urls>" ],
+            "js" : [
+                "./background-process/gesture.js",
+                "./content-scripts/interact.js",
+                "./content-scripts/easing.js"
+            ],
+            "run_at":"document_end"
+        }
+    ]
+}
