@@ -236,7 +236,7 @@
                 if (dy > movethresh && !dirx) {
                     if (davg > overthresh) {
                         console.log('over up')
-                        window.gestureControl.callbacks.toggleOverview.call();
+                        window.gestureControl.callbacks.over_up.call();
                     }
                     else {
                         console.log('up')
@@ -246,7 +246,7 @@
                 else if (dy < -movethresh && !dirx) {
                     if (davg > overthresh) {
                         console.log('over down')
-                        window.gestureControl.callbacks.toggleOverview.call();
+                        window.gestureControl.callbacks.over_down.call();
                     }
                     else {
                         console.log('down');
