@@ -33,8 +33,6 @@
         scrollWindow(600, 0);
     };
 
-
-
     console.log('defined handlers');
     console.log(window.gestureControl);
 
